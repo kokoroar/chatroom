@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  frontend:
+    image: "karaih963/chatroom-frontend"
+    restart: always
+    build: ./frontend
+    tty: true
+    ports:
+      - 80:80
+  backend:
+    image: "karaih963/chatroom-backend"
+    restart: always
+    build: ./backend
+    tty: true
